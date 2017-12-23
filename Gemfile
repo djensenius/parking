@@ -15,7 +15,6 @@ gem "bootstrap", "~> 4.0.0.beta"
 gem "dlegr250_material_design", "~> 0.6.02"
 gem "dotenv-rails"
 gem "jquery-rails"
-gem "simple_form"
 gem "sprockets", "~> 4.0beta6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
