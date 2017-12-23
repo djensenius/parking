@@ -66,6 +66,11 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
+group :test do
+  gem "codecov", require: false
+  gem "simplecov", require: false
+end
+
 group :production do
   gem "dalli"
   gem "snappy"
