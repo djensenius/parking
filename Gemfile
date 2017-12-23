@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-ruby "2.4.3"
+ruby "2.4.1"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -12,9 +12,9 @@ gem "activerecord-session_store", github: "rails/activerecord-session_store"
 gem "activeresource"
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap", "~> 4.0.0.beta"
+gem "dlegr250_material_design", "~> 0.6.02"
 gem "dotenv-rails"
 gem "jquery-rails"
-gem 'dlegr250_material_design', '~> 0.6.02'
 gem "simple_form"
 gem "sprockets", "~> 4.0beta6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,7 +40,7 @@ gem "jbuilder", "~> 2.5"
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem "coffee-rails", "~> 4.2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
