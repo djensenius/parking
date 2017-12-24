@@ -1,1 +1,71 @@
 @import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  color: rgba(255, 255, 255, 0.9);
+  height: auto;
+  line-height: 0;
+  min-height: 200px;
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.arrow-logo {
+  height: 5rem;
+}
+
+.arrow-orange {
+  color: #f37f30;
+}
+
+.arrow-green {
+  color: #94c648;
+}

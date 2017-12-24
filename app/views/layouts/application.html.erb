@@ -8,7 +8,66 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <%= yield %>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo"><img class="arrow-logo" src="/assets/ArrowLofts.svg"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Log in</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Log in</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center arrow-green">Visitor Parking</h1>
+      </div>
+    </div>
+    <div class="parallax"><img src="/assets/exterior.jpg" alt="Arrow lofts"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer arrow-orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Arrow Lofts</h5>
+          <p class="grey-text text-lighten-4">A beautiful home in a beautiful city.</p>
+
+
+        </div>
+        <div class="col l6 s12">
+          <h5 class="white-text">Additional Resources</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Evercondo</a></li>
+            <li><a class="white-text" href="#!">City of Kitchener</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Built by David
+      </div>
+    </div>
+  </footer>
   </body>
 </html>
