@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/stylelint/**/*
+.*/vendor/bundle/**/*
+.*/tmp/*
+.*/test/data/invalid-flow-json.json
+.*/app/assets/javascripts/cable.js
+
+[include]
+
+[libs]
+
+[options]
+unsafe.enable_getters_and_setters=true
