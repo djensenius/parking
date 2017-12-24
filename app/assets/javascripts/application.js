@@ -13,5 +13,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require dlegr250_material_design
+//= require jquery
+//= require materialize
 //= require_tree .
