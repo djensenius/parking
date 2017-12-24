@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
 class ParkingController < ApplicationController
-  def index
-  end
+  def index; end
 end

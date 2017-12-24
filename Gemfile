@@ -12,10 +12,9 @@ gem "activerecord-session_store", github: "rails/activerecord-session_store"
 gem "activeresource"
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap", "~> 4.0.0.beta"
+gem "dlegr250_material_design", "~> 0.6.02"
 gem "dotenv-rails"
 gem "jquery-rails"
-gem 'dlegr250_material_design', '~> 0.6.02'
-gem "simple_form"
 gem "sprockets", "~> 4.0beta6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
@@ -40,7 +39,7 @@ gem "jbuilder", "~> 2.5"
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem "coffee-rails", "~> 4.2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -51,6 +50,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem "capybara", "~> 2.13"
   gem "database_cleaner"
+  gem "pronto"
+  gem "pronto-brakeman"
+  gem "pronto-eslint_npm"
+  gem "pronto-flay"
+  gem "pronto-rubocop"
+  gem "pronto-stylelint"
   gem "pry-byebug"
   gem "rails-controller-testing"
   gem "rubocop"
@@ -64,6 +69,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+end
+
+group :test do
+  gem "codecov", require: false
+  gem "simplecov", require: false
 end
 
 group :production do
