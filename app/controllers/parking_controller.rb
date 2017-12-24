@@ -2,4 +2,8 @@
 
 class ParkingController < ApplicationController
   def index; end
+
+  def create
+    render plain: params[:parking].inspect
+  end
 end
