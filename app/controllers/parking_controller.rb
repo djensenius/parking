@@ -6,9 +6,16 @@ class ParkingController < ApplicationController
   def index; end
 
   def create
-    parking = Parking.new(parking_params)
-    parking.save
-    redirect_to registered_path
+    @parking = Parking.new(parking_params)
+    if @parking.save
+      redirect_to registered_path
+    else
+      render action: "new"
+    end
+  end
+
+  def new
+    @parking = Parking.new
   end
 
   def registered; end
