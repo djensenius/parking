@@ -18,7 +18,7 @@ window.onLoad = findButton;
 
 function findButton() {
   // $FlowFixMe
-  document.getElementById("parking-button").addEventListener("click", function() { // $FlowFixMe
+  document.getElementById("parking-button").addEventListener("click", () => { // $FlowFixMe
     form.submit();
   });
 }

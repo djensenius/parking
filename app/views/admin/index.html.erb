@@ -1,0 +1,22 @@
+<h2>Arrow Parking Administration</h2>
+
+<table class="table striped responsive-table">
+  <thead>
+    <tr>
+      <th scope="col">Vehicle Make</th>
+      <th scope="col">License Plate</th>
+      <th scope="col">Number of Nights</th>
+      <th scope="col">Registered Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @list.each do |car| %>
+      <tr>
+        <th scope="row"><%= car.make %></th>
+        <td><%= car.license %></td>
+        <td><%= car.nights %></td>
+        <td><%= car.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
