@@ -1,39 +1,39 @@
 <h4>Register Vehicle</h4>
 
 <div class="row">
-    <form class="col s12">
+    <%= form_with scope: :parking, url: "/parking", class: "col s12", id: "parking-form", local: true do |form| %>
       <div class="row">
         <div class="input-field col s6">
-          <input id="code_number" type="text" class="validate">
-          <label for="code_number">Code Number</label>
+          <input name="parking[code]" id="parking[code]" type="text" class="validate">
+          <label for="parking[code]">Code Number</label>
         </div>
         <div class="input-field col s6">
-          <input id="unit_number" type="text" class="validate">
-          <label for="unit_number">Unit Number</label>
+          <input name="parking[unit]" id="parking[unit]" type="text" class="validate">
+          <label for="parking[unit]">Unit Number</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="make" type="text" class="validate">
-          <label for="make">Vehicle Make</label>
+          <input name="parking[make]" id="parking[make]" type="text" class="validate">
+          <label for="parking[make]">Vehicle Make</label>
         </div>
         <div class="input-field col s6">
-          <input id="colour" type="text" class="validate">
-          <label for="colour">Vehicle Colour</label>
+          <input name="parking[color]" id="parking[color]" type="text" class="validate">
+          <label for="parking[color]">Vehicle Colour</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="license_number" type="text" class="validate">
-          <label for="license_number">License Number</label>
+          <input name="parking[license]" id="parking[license]" type="text" class="validate">
+          <label for="parking[license]">License Plate</label>
         </div>
         <div class="input-field col s6">
-          <input id="number_of_nights" type="text" class="validate">
-          <label for="number_of_nights">Number of Nights</label>
+          <input name="parking[nights]" id="parking[nights]" type="text" class="validate">
+          <label for="parking[nights]">Number of Nights</label>
         </div>
       </div>
       <div class="row">
-        <a class="waves-effect waves-light btn"><i class="material-icons right">directions_car</i>Register</a>
+        <button id="parking-button" class="waves-effect waves-light btn"><i class="material-icons right">directions_car</i>Register</button>
       </div>
-    </form>
+    <% end %>
   </div>
