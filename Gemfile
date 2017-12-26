@@ -50,6 +50,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem "capybara", "~> 2.13"
   gem "database_cleaner"
+  gem "minitest-profile"
+  gem "minitest-rails"
+  gem "mocha"
   gem "pronto"
   gem "pronto-brakeman"
   gem "pronto-eslint_npm"
@@ -60,6 +63,8 @@ group :development, :test do
   gem "rails-controller-testing"
   gem "rubocop"
   gem "selenium-webdriver"
+  gem "timecop"
+  gem "webmock"
 end
 
 group :development do
