@@ -1,10 +1,5 @@
 # Arrow Lofts Parking
 
-## TODO
+This project is for a new website to manage visitor parking at Arrow Lofts.
 
-* Tests for existing models/controllers
-* Fix text for "new" page
-* Consolidate create & new pages
-* i18n
-* Auto email on save
-* ENV variables for sensitive data
+Please submit [issues](https://github.com/djensenius/parking/issues) and see the [project status](https://github.com/djensenius/parking/projects/1) for this project for more information.
