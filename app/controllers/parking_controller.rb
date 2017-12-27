@@ -3,19 +3,17 @@
 class ParkingController < ApplicationController
   protect_from_forgery with: :exception
 
-  def index; end
+  def index
+    @parking = Parking.new
+  end
 
   def create
     @parking = Parking.new(parking_params)
     if @parking.save
       redirect_to registered_path
     else
-      render action: "new"
+      render action: "index"
     end
-  end
-
-  def new
-    @parking = Parking.new
   end
 
   def registered; end
