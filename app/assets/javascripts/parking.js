@@ -7,7 +7,7 @@ const form = document.getElementById("parking-form");
 /* eslint-disable */
 (function($) {
   $(function() {
-    $(".button-collapse").sideNav();
+    // $(".button-collapse").sideNav();
     $(".parallax").parallax();
   }); // $FlowFixMe
 })(jQuery);

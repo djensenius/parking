@@ -1,34 +1,50 @@
 <h4>Register Vehicle</h4>
 <div class="row">
     <%= form_with scope: :parking, url: "/parking", class: "col s12", id: "parking-form", local: true do |form| %>
+      <% if @parking.errors.any? %>
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card red darken-1">
+              <div class="card-content white-text"  id="error_explanation">
+                <span class="card-title">Error saving registration</span>
+                <ul>
+                  <% @parking.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
       <div class="row">
         <div class="input-field col s6">
-          <input name="parking[code]" id="parking[code]" type="text" class="validate">
-          <label for="parking[code]">Code Number</label>
+          <%= form.label :code, "Code Number" %>
+          <%= form.text_field :code, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <input name="parking[unit]" id="parking[unit]" type="text" class="validate">
-          <label for="parking[unit]">Unit Number</label>
+          <%= form.label :unit, "Unit Number" %>
+          <%= form.text_field :unit, class: "validate" %>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input name="parking[make]" id="parking[make]" type="text" class="validate">
-          <label for="parking[make]">Vehicle Make</label>
+          <%= form.label :make, "Vehicle Make" %>
+          <%= form.text_field :make, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <input name="parking[color]" id="parking[color]" type="text" class="validate">
-          <label for="parking[color]">Vehicle Colour</label>
+          <%= form.label :color, "Vehicle Colour" %>
+          <%= form.text_field :color, class: "validate" %>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input name="parking[license]" id="parking[license]" type="text" class="validate">
-          <label for="parking[license]">License Plate</label>
+          <%= form.label :license, "License Plate" %>
+          <%= form.text_field :license, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <input name="parking[nights]" id="parking[nights]" type="text" class="validate">
-          <label for="parking[nights]">Number of Nights</label>
+          <%= form.label :nights, "Number of Nights" %>
+          <%= form.text_field :nights, class: "validate" %>
         </div>
       </div>
       <div class="row">
