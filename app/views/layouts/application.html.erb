@@ -10,14 +10,14 @@
   <body>
     <nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo"><img class="arrow-logo" src="/assets/ArrowLofts.svg"></a>
+        <a id="logo-container" href="#" class="brand-logo" alt="<%= I18n.t("nav.brand-alt") %>"><img class="arrow-logo" src="/assets/ArrowLofts.svg"></a>
         <!-- <ul class="right hide-on-med-and-down">
-          <li><a href="#">Log in</a></li>
+          <li><a href="#"><%= I18n.t("nav.login") %></a></li>
         </ul> -->
 
         <!--
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Log in</a></li>
+          <li><a href="#"><%= I18n.t("nav.login") %></a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
@@ -28,10 +28,10 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center arrow-green">Visitor Parking</h1>
+        <h1 class="header center arrow-green"><%= I18n.t("parking.heading") %></h1>
       </div>
     </div>
-    <div class="parallax"><img src="/assets/exterior.jpg" alt="Arrow lofts"></div>
+    <div class="parallax"><img src="/assets/exterior.jpg" alt="<%= I18n.t("parking.image-alt") %>"></div>
   </div>
 
   <div class="container">
@@ -51,23 +51,24 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Arrow Lofts</h5>
-          <p class="grey-text text-lighten-4">A beautiful home in a beautiful city.</p>
+          <h5 class="white-text"><%= I18n.t("footer.brand") %></h5>
+          <p class="grey-text text-lighten-4"><%= I18n.t("footer.mission") %></p>
 
 
         </div>
         <div class="col l6 s12">
-          <h5 class="white-text">Additional Resources</h5>
+          <h5 class="white-text"><%= I18n.t("footer.additional-resources") %></h5>
           <ul>
-            <li><a class="white-text" href="#!">Evercondo</a></li>
-            <li><a class="white-text" href="#!">City of Kitchener</a></li>
+            <li><a class="white-text" href="<%= I18n.t("footer.links.one") %>"><%= I18n.t("footer.links.one-text") %></a></li>
+            <li><a class="white-text" href="<%= I18n.t("footer.links.two") %>"><%= I18n.t("footer.links.two-text") %></a></li>
+            <li><a class="white-text" href="<%= I18n.t("footer.links.three") %>"><%= I18n.t("footer.links.three-text") %></a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        Built by David
+        <a class="white-text" href="<%= I18n.t("footer.copyright-link") %>"><%= I18n.t("footer.copyright") %></a>
       </div>
     </div>
   </footer>

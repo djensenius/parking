@@ -6,7 +6,7 @@
           <div class="col s12 m12">
             <div class="card red darken-1">
               <div class="card-content white-text"  id="error_explanation">
-                <span class="card-title">Error saving registration</span>
+                <span class="card-title"><%= I18n.t("parking.form.error") %></span>
                 <ul>
                   <% @parking.errors.full_messages.each do |msg| %>
                     <li><%= msg %></li>
@@ -19,36 +19,39 @@
       <% end %>
       <div class="row">
         <div class="input-field col s6">
-          <%= form.label :code, "Code Number" %>
+          <%= form.label :code, I18n.t("parking.form.code") %>
           <%= form.text_field :code, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <%= form.label :unit, "Unit Number" %>
+          <%= form.label :unit, I18n.t("parking.form.unit") %>
           <%= form.text_field :unit, class: "validate" %>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <%= form.label :make, "Vehicle Make" %>
+          <%= form.label :make, I18n.t("parking.form.make") %>
           <%= form.text_field :make, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <%= form.label :color, "Vehicle Colour" %>
+          <%= form.label :color, I18n.t("parking.form.color") %>
           <%= form.text_field :color, class: "validate" %>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <%= form.label :license, "License Plate" %>
+          <%= form.label :license, I18n.t("parking.form.license") %>
           <%= form.text_field :license, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <%= form.label :nights, "Number of Nights" %>
+          <%= form.label :nights, I18n.t("parking.form.nights") %>
           <%= form.text_field :nights, class: "validate" %>
         </div>
       </div>
       <div class="row">
-        <button id="parking-button" class="waves-effect waves-light btn"><i class="material-icons right">directions_car</i>Register</button>
+        <button id="parking-button" class="waves-effect waves-light btn">
+          <i class="material-icons right">directions_car</i>
+          <%= I18n.t("parking.form.button") %>
+        </button>
       </div>
     <% end %>
   </div>
