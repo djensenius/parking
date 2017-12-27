@@ -40,7 +40,7 @@ describe ParkingController do
 
       it "Should not save" do
         subject
-        assert_template "parking/new"
+        assert_template "parking/index"
       end
     end
 
@@ -60,7 +60,7 @@ describe ParkingController do
 
       it "Should not save" do
         subject
-        assert_template "parking/new"
+        assert_template "parking/index"
       end
     end
 
@@ -80,7 +80,7 @@ describe ParkingController do
 
       it "Should not save" do
         subject
-        assert_template "parking/new"
+        assert_template "parking/index"
       end
     end
 
@@ -100,7 +100,7 @@ describe ParkingController do
 
       it "Should not save" do
         subject
-        assert_template "parking/new"
+        assert_template "parking/index"
       end
     end
 
@@ -120,7 +120,7 @@ describe ParkingController do
 
       it "Should not save" do
         subject
-        assert_template "parking/new"
+        assert_template "parking/index"
       end
     end
 
@@ -140,7 +140,7 @@ describe ParkingController do
 
       it "Should not save" do
         subject
-        assert_template "parking/new"
+        assert_template "parking/index"
       end
     end
 
@@ -162,7 +162,7 @@ describe ParkingController do
 
         it "Should not save" do
           subject
-          assert_template "parking/new"
+          assert_template "parking/index"
         end
       end
 
@@ -183,7 +183,7 @@ describe ParkingController do
 
         it "Should not save" do
           subject
-          assert_template "parking/new"
+          assert_template "parking/index"
         end
       end
     end
