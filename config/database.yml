@@ -24,9 +24,12 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: parking_development
 
+production:
+  <<: *default
+  database: parking
 
 test:
   <<: *default
-  database: myapp_test
+  database: parking_test
