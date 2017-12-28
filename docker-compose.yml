@@ -9,8 +9,8 @@ services:
   web:
     build: .
     environment:
-      - RAILS_ENV=development
-    command: bundle exec rails s -p 3000 -b '0.0.0.0' -e production
+      - RAILS_ENV=${RAILS_ENV}
+    command: bundle exec rails s -p 3000 -b '0.0.0.0' -e ${RAILS_ENV}
     volumes:
       - .:/myapp
     ports:
