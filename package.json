@@ -10,7 +10,8 @@
      "bugsnag-js": "^3.2.0",
      "i18n-js": "http://github.com/fnando/i18n-js/archive/v3.0.0.rc12.tar.gz",
      "jest": "^19.0.2",
-     "node": "^8.3.0"
+     "node": "^8.3.0",
+     "uglify-es": "^3.3.2"
   },
    "devDependencies": {
      "babel-cli": "^6.24.1",
