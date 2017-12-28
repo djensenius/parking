@@ -10,6 +10,7 @@ class ParkingController < ApplicationController
   def create
     @parking = Parking.new(parking_params)
     if @parking.save
+      ParkingMailer.registration(@parking).deliver_later
       redirect_to registered_path
     else
       render action: "index"
