@@ -58,7 +58,7 @@ en:
       license: "License Plate"
       nights: "Number of Nights"
       button: "Register"
-  registered:
+  registration:
     thank-you: "Thank you"
     body: |
       The vehicle has been registered.
