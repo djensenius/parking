@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 ---
 en:
+  title: "Arrow Lofts Parking"
   nav:
     brand-alt: "Arrow Lofts"
     login: "Log in"
@@ -58,7 +59,7 @@ en:
       license: "License Plate"
       nights: "Number of Nights"
       button: "Register"
-  registered:
+  registration:
     thank-you: "Thank you"
     body: |
       The vehicle has been registered.
