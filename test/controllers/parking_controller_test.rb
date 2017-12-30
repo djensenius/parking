@@ -24,123 +24,31 @@ describe ParkingController do
   end
 
   describe "Missing params" do
-    describe "Missing code" do
-      let(:params) do
-        {
-          parking: {
-            unit: 1,
-            make: "FAST",
-            color: "Green",
-            license: "banana",
-            nights: 4
+    [:code, :unit, :make, :color, :license, :nights].each do |param|
+      describe "Missing #{param}" do
+        full_parameter =
+          {
+            parking: {
+              code: "ABC",
+              unit: 1,
+              make: "FAST",
+              color: "Green",
+              license: "banana",
+              nights: 4
+            }
           }
-        }
-      end
-      let(:subject) { post :create, params: params }
 
-      it "Should not save" do
-        subject
-        assert_template "parking/index"
-      end
-    end
-
-    describe "Missing unit" do
-      let(:params) do
-        {
-          parking: {
-            code: "ABC",
-            make: "FAST",
-            color: "Green",
-            license: "banana",
-            nights: 4
+        let(:params) do
+          {
+            parking: full_parameter[:parking].except(param)
           }
-        }
-      end
-      let(:subject) { post :create, params: params }
+        end
+        let(:subject) { post :create, params: params }
 
-      it "Should not save" do
-        subject
-        assert_template "parking/index"
-      end
-    end
-
-    describe "Missing make" do
-      let(:params) do
-        {
-          parking: {
-            code: "ABC",
-            unit: 1,
-            color: "Green",
-            license: "banana",
-            nights: 4
-          }
-        }
-      end
-      let(:subject) { post :create, params: params }
-
-      it "Should not save" do
-        subject
-        assert_template "parking/index"
-      end
-    end
-
-    describe "Missing color" do
-      let(:params) do
-        {
-          parking: {
-            code: "ABC",
-            unit: 1,
-            make: "FAST",
-            license: "banana",
-            nights: 4
-          }
-        }
-      end
-      let(:subject) { post :create, params: params }
-
-      it "Should not save" do
-        subject
-        assert_template "parking/index"
-      end
-    end
-
-    describe "Missing license" do
-      let(:params) do
-        {
-          parking: {
-            code: "ABC",
-            unit: 1,
-            make: "FAST",
-            color: "Green",
-            nights: 4
-          }
-        }
-      end
-      let(:subject) { post :create, params: params }
-
-      it "Should not save" do
-        subject
-        assert_template "parking/index"
-      end
-    end
-
-    describe "Missing nights" do
-      let(:params) do
-        {
-          parking: {
-            code: "ABC",
-            unit: 1,
-            make: "FAST",
-            color: "Green",
-            license: "banana"
-          }
-        }
-      end
-      let(:subject) { post :create, params: params }
-
-      it "Should not save" do
-        subject
-        assert_template "parking/index"
+        it "Should not save" do
+          subject
+          assert_template "parking/index"
+        end
       end
     end
 
