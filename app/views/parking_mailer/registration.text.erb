@@ -1,9 +1,14 @@
-Arrow Lofts Visitor Parking Registration
+<%= I18n.t("email.title") %>
 ========================================
 
-A visitor has registered to park at Arrow Lofts.
+<%= I18n.t("email.introduction") %>
 
-Code: <%= @parking.code %>
+<%= I18n.t("parking.form.code") %>: <%= @parking.code %>
+<%= I18n.t("parking.form.unit") %>: <%= @parking.unit %>
+<%= I18n.t("parking.form.make") %>: <%= @parking.make %>
+<%= I18n.t("parking.form.color") %>: <%= @parking.color %>
+<%= I18n.t("parking.form.license") %>: <%= @parking.license %>
+<%= I18n.t("parking.form.nights") %>: <%= @parking.nights %>
 
-All the best!
-Arrow Lofts Parking Robot
+<%= I18n.t("email.salutation") %>
+<%= I18n.t("email.signature") %>

@@ -3,6 +3,6 @@
 class ParkingMailer < ApplicationMailer
   def registration(parking)
     @parking = parking
-    mail(to: ENV["EMAIL"], subject: "Arrow Lofts Parking Registration")
+    mail(to: ENV["EMAIL"], subject: I18n.t("email.subject"))
   end
 end
