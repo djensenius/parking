@@ -2,6 +2,7 @@
 
 class ParkingController < ApplicationController
   protect_from_forgery with: :exception
+  skip_before_action :verify_authenticity_token
 
   def index
     @parking = Parking.new
@@ -10,6 +11,7 @@ class ParkingController < ApplicationController
   def create
     @parking = Parking.new(parking_params)
     if @parking.save
+      ParkingMailer.registration(@parking).deliver_later
       redirect_to registered_path
     else
       render action: "index"

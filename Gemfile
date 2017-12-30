@@ -12,6 +12,7 @@ gem "activerecord-session_store", github: "rails/activerecord-session_store"
 gem "activeresource"
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap", "~> 4.0.0.beta"
+gem "bugsnag"
 gem "dotenv-rails"
 gem "jquery-rails"
 gem "materialize-sass", "~> 1.0.0.alpha2"
@@ -68,6 +69,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "letter_opener"
   gem "listen", ">= 3.0.5", "< 3.2"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem "web-console", ">= 3.3.0"

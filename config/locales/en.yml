@@ -67,3 +67,9 @@ en:
   admin:
     title: "Arrow Parking Administration"
     date: "Date Registered"
+  email:
+    subject: "Arrow Lofts Visitor Parking Registration"
+    title: "Arrow Lofts Visitor Parking Registration"
+    introduction: "A visitor vehicle has registered to park at Arrow Lofts."
+    salutation: "All the best!"
+    signature: "Arrow Lofts Parking Robot"

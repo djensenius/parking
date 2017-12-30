@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= I18n.t("email.title") %></h1>
+    <p>
+      <%= I18n.t("email.introduction") %>
+    </p>
+    <table border=0>
+      <tr>
+        <td><%= I18n.t("parking.form.code") %></td><td><%= @parking.code %></td>
+      </tr>
+      <tr>
+        <td><%= I18n.t("parking.form.unit") %></td><td><%= @parking.unit %></td>
+      </tr>
+      <tr>
+        <td><%= I18n.t("parking.form.make") %></td><td><%= @parking.make %></td>
+      </tr>
+      <tr>
+        <td><%= I18n.t("parking.form.color") %></td><td><%= @parking.color %></td>
+      </tr>
+      <tr>
+        <td><%= I18n.t("parking.form.license") %></td><td><%= @parking.license %></td>
+      </tr>
+      <tr>
+        <td><%= I18n.t("parking.form.nights") %></td><td><%= @parking.nights %></td>
+      </tr>
+    </table>
+    <p><%= I18n.t("email.salutation") %></p>
+    <p><%= I18n.t("email.signature") %></p>
+  </body>
+</html>
