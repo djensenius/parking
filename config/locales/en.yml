@@ -30,7 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 ---
 en:
-  title: "Arrow Lofts Parking"
+  title: "Arrow Lofts Visitor Parking"
   nav:
     brand-alt: "Arrow Lofts"
     login: "Log in"
