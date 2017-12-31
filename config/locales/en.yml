@@ -67,6 +67,9 @@ en:
   admin:
     title: "Arrow Parking Administration"
     date: "Date Registered"
+    delete: "Delete"
+    delete_confirmation:
+      Are you sure? This will permanently remove this registration.
   email:
     subject: "Arrow Lofts Visitor Parking Registration"
     title: "Arrow Lofts Visitor Parking Registration"
