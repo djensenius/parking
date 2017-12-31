@@ -7,4 +7,11 @@ class AdminController < ApplicationController
   def index
     @list = Parking.all.reverse
   end
+
+  def destroy
+    @registration = Parking.find(params[:id])
+    @registration.destroy
+
+    redirect_to admin_path
+  end
 end
