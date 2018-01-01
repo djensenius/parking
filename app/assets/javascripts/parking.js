@@ -22,3 +22,16 @@ function findButton() {
     form.submit();
   });
 }
+
+// $FlowFixMe
+$(document).ready(() => {
+  const startElem = document.querySelector(".start_date");
+  const startDate = new Date();
+  const startOptions = { defaultDate: startDate, setDefaultDate: true }; // $FlowFixMe
+  new M.Datepicker(startElem, startOptions); // eslint-disable-line
+
+  const endElem = document.querySelector(".end_date");
+  const endDate = new Date(new Date().getTime() + (86400 * 1000));
+  const endOptions = { defaultDate: endDate, setDefaultDate: true }; // $FlowFixMe
+  new M.Datepicker(endElem, endOptions); // eslint-disable-line
+});

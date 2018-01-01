@@ -6,5 +6,6 @@ class Parking < ApplicationRecord
   validates :make, presence: true
   validates :color, presence: true
   validates :license, presence: true
-  validates :nights, presence: true, numericality: { only_integer: true }
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 end

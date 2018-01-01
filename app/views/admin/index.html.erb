@@ -5,8 +5,9 @@
     <tr>
       <th scope="col"><%= I18n.t("parking.form.make") %></th>
       <th scope="col"><%= I18n.t("parking.form.license") %></th>
-      <th scope="col"><%= I18n.t("parking.form.nights") %></th>
-      <th scope="col"><%= I18n.t("admin.date") %></th>
+      <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
+      <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
+      <th scope="col"><%= I18n.t("parking.form.contact") %></th>
       <th><%= I18n.t("admin.delete") %></th>
     </tr>
   </thead>
@@ -15,8 +16,9 @@
       <tr>
         <th scope="row"><%= car.make %></th>
         <td><%= car.license %></td>
-        <td><%= car.nights %></td>
-        <td><%= car.created_at %></td>
+        <td><%= car.start_date %></td>
+        <td><%= car.end_date %></td>
+        <td><%= car.contact %></td>
         <td><%= link_to '<i class="material-icons red-text">delete_forever</i>'.html_safe, url_for(action: :destroy, id: car.id), method: :delete, data: {confirm: I18n.t("admin.delete_confirmation")} %></td>
       </tr>
     <% end %>

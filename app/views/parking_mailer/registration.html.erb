@@ -10,6 +10,12 @@
     </p>
     <table border=0>
       <tr>
+        <td><%= I18n.t("parking.form.start_date") %></td><td><%= @parking.start_date %></td>
+      </tr>
+      <tr>
+        <td><%= I18n.t("parking.form.end_date") %></td><td><%= @parking.end_date %></td>
+      </tr>
+      <tr>
         <td><%= I18n.t("parking.form.code") %></td><td><%= @parking.code %></td>
       </tr>
       <tr>
@@ -23,9 +29,6 @@
       </tr>
       <tr>
         <td><%= I18n.t("parking.form.license") %></td><td><%= @parking.license %></td>
-      </tr>
-      <tr>
-        <td><%= I18n.t("parking.form.nights") %></td><td><%= @parking.nights %></td>
       </tr>
     </table>
     <p><%= I18n.t("email.salutation") %></p>

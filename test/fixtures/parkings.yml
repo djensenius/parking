@@ -6,7 +6,9 @@ one:
   make: MyString
   color: MyString
   license: MyString
-  nights: 1
+  start_date: MyString
+  end_date: MyString
+  contact: MyString
 
 two:
   code: MyString
@@ -14,4 +16,6 @@ two:
   make: MyString
   color: MyString
   license: MyString
-  nights: 1
+  start_date: MyString
+  end_date: MyString
+  contact: MyString
