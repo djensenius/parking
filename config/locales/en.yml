@@ -58,8 +58,8 @@ en:
       color: "Vehicle Colour"
       license: "License Plate"
       button: "Register"
-      start_date: "From"
-      end_date: "To"
+      start_date: "Start Date"
+      end_date: "End Date"
       contact: "Email or Phone Number"
   registration:
     thank-you: "Thank you"
