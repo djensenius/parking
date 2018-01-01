@@ -11,7 +11,8 @@ class UserMailerTest < ActionMailer::TestCase
         make: "FAST",
         color: "Green",
         license: "banana",
-        nights: 4
+        start_date: "2017-05-01",
+        end_date: "2017-05-02"
       )
       email = ParkingMailer.registration(parking)
 
