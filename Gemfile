@@ -15,7 +15,7 @@ gem "bootstrap", "~> 4.0.0.beta"
 gem "bugsnag"
 gem "dotenv-rails"
 gem "jquery-rails"
-gem "materialize-sass", "~> 1.0.0.alpha2"
+gem "materialize-sass", "~> 1.0.0.alpha3"
 gem "sprockets", "~> 4.0beta6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
