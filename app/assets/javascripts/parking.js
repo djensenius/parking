@@ -5,12 +5,14 @@
 const form = document.getElementById("parking-form");
 
 /* eslint-disable */
-(function($) {
-  $(function() {
-    // $(".button-collapse").sideNav();
-    $(".parallax").parallax();
-  }); // $FlowFixMe
-})(jQuery);
+document.addEventListener("turbolinks:load", function() {
+  (function($) {
+    $(function() {
+      // $(".button-collapse").sideNav();
+      $(".parallax").parallax();
+    }); // $FlowFixMe
+  })(jQuery);
+});
 /* eslint-enable */
 
 
@@ -24,7 +26,8 @@ function findButton() {
 }
 
 // $FlowFixMe
-$(document).ready(() => {
+document.addEventListener("turbolinks:load", () => {
+// $(document).ready(() => {
   const startElem = document.querySelector(".start_date");
   const startDate = new Date();
   const startOptions = { defaultDate: startDate, setDefaultDate: true }; // $FlowFixMe
