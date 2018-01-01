@@ -12,7 +12,9 @@ describe ParkingController do
           make: "FAST",
           color: "Green",
           license: "banana",
-          nights: 4
+          start_date: "2017-05-05",
+          end_date: "2017-06-06",
+          contact: "test@example.com"
         }
       }
     end
@@ -24,7 +26,7 @@ describe ParkingController do
   end
 
   describe "Missing params" do
-    [:code, :unit, :make, :color, :license, :nights].each do |param|
+    [:code, :unit, :make, :color, :license, :start_date, :end_date].each do |param|
       describe "Missing #{param}" do
         full_parameter =
           {
@@ -34,7 +36,8 @@ describe ParkingController do
               make: "FAST",
               color: "Green",
               license: "banana",
-              nights: 4
+              start_date: "2017-05-05",
+              end_date: "2017-06-06"
             }
           }
 
@@ -61,29 +64,7 @@ describe ParkingController do
               unit: "One hundred ten",
               make: "FAST",
               color: "Green",
-              license: "banana",
-              nights: 4
-            }
-          }
-        end
-        let(:subject) { post :create, params: params }
-
-        it "Should not save" do
-          subject
-          assert_template "parking/index"
-        end
-      end
-
-      describe "Nights is not a number" do
-        let(:params) do
-          {
-            parking: {
-              code: "ABC",
-              unit: 1,
-              make: "FAST",
-              color: "Green",
-              license: "banana",
-              nights: "four"
+              license: "banana"
             }
           }
         end

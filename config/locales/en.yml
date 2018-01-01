@@ -57,8 +57,10 @@ en:
       make: "Vehicle Make"
       color: "Vehicle Colour"
       license: "License Plate"
-      nights: "Number of Nights"
       button: "Register"
+      start_date: "From"
+      end_date: "To"
+      contact: "Email or Phone Number (optional)"
   registration:
     thank-you: "Thank you"
     body: |

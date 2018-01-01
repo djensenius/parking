@@ -20,6 +20,16 @@
       <%= csrf_meta_tags %>
       <div class="row">
         <div class="input-field col s6">
+          <%= form.label :start_date, I18n.t("parking.form.start_date") %>
+          <%= form.text_field :start_date, class: "validate, start_date" %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :end_date, I18n.t("parking.form.end_date") %>
+          <%= form.text_field :end_date, class: "validate, end_date" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
           <%= form.label :code, I18n.t("parking.form.code") %>
           <%= form.text_field :code, class: "validate" %>
         </div>
@@ -44,8 +54,8 @@
           <%= form.text_field :license, class: "validate" %>
         </div>
         <div class="input-field col s6">
-          <%= form.label :nights, I18n.t("parking.form.nights") %>
-          <%= form.text_field :nights, class: "validate" %>
+          <%= form.label :contact, I18n.t("parking.form.contact") %>
+          <%= form.text_field :contact, class: "validate" %>
         </div>
       </div>
       <div class="row">
