@@ -8,4 +8,5 @@ class Parking < ApplicationRecord
   validates :license, presence: true
   validates :start_date, presence: true
   validates :end_date, presence: true
+  validates :contact, presence: true
 end

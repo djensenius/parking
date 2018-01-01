@@ -60,7 +60,7 @@ en:
       button: "Register"
       start_date: "From"
       end_date: "To"
-      contact: "Email or Phone Number (optional)"
+      contact: "Email or Phone Number"
   registration:
     thank-you: "Thank you"
     body: |
