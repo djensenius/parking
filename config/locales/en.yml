@@ -58,9 +58,9 @@ en:
       color: "Vehicle Colour"
       license: "License Plate"
       button: "Register"
-      start_date: "From"
-      end_date: "To"
-      contact: "Email or Phone Number (optional)"
+      start_date: "Start Date"
+      end_date: "End Date"
+      contact: "Email or Phone Number"
   registration:
     thank-you: "Thank you"
     body: |
@@ -78,3 +78,5 @@ en:
     introduction: "A visitor vehicle has registered to park at Arrow Lofts."
     salutation: "All the best!"
     signature: "Arrow Lofts Parking Robot"
+    street_address: "Street Address"
+    actual_street_address: "112 Benton Street"

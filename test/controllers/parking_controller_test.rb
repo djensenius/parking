@@ -26,7 +26,7 @@ describe ParkingController do
   end
 
   describe "Missing params" do
-    [:code, :unit, :make, :color, :license, :start_date, :end_date].each do |param|
+    [:code, :unit, :make, :color, :license, :start_date, :end_date, :contact].each do |param|
       describe "Missing #{param}" do
         full_parameter =
           {
