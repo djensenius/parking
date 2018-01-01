@@ -78,3 +78,5 @@ en:
     introduction: "A visitor vehicle has registered to park at Arrow Lofts."
     salutation: "All the best!"
     signature: "Arrow Lofts Parking Robot"
+    street_address: "Street Address"
+    actual_street_address: "112 Benton Street"
