@@ -35,7 +35,7 @@
         </div>
         <div class="input-field col s6">
           <%= form.label :unit, I18n.t("parking.form.unit") %>
-          <%= form.text_field :unit, class: "validate" %>
+          <%= form.number_field :unit, class: "validate" %>
         </div>
       </div>
       <div class="row">
@@ -55,7 +55,7 @@
         </div>
         <div class="input-field col s6">
           <%= form.label :contact, I18n.t("parking.form.contact") %>
-          <%= form.text_field :contact, class: "validate" %>
+          <%= form.email_field :contact, class: "validate" %>
         </div>
       </div>
       <div class="row">
