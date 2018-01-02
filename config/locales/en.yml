@@ -51,6 +51,7 @@ en:
     heading: "Visitor Parking"
     image-alt: "Arrow Lofts"
     form:
+      title: "Register a Vehicle"
       error: "Error saving registration"
       code: "Code Number"
       unit: "Unit Number"
@@ -61,6 +62,7 @@ en:
       start_date: "Start Date"
       end_date: "End Date"
       contact: "Email or Phone Number"
+      code_tip: "If you do not know your code, contact property management."
   registration:
     thank-you: "Thank you"
     body: |
