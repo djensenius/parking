@@ -6,8 +6,8 @@ class ParkingMailer < ApplicationMailer
     mail(to: ENV["EMAIL"], subject: I18n.t("email.subject"))
   end
 
-  def confirmation
+  def confirmation(parking)
     @parking = parking
-    mail(to: ENV["EMAIL"], subject: I18n.t("email.subject"))
+    mail(to: parking[:contact], subject: I18n.t("email.confirmation.subject"))
   end
 end
