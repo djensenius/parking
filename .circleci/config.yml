@@ -21,6 +21,8 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          command: "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
 
       # Download and cache dependencies
       - restore_cache:
