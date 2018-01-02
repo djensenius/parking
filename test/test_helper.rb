@@ -11,6 +11,7 @@ require "minitest/rails"
 require "mocha/mini_test"
 require "webmock/minitest"
 require "database_cleaner"
+require "support/action_mailer_helpers"
 
 class Module
   include Minitest::Spec::DSL
@@ -130,5 +131,6 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+    include ActionMailerHelpers
   end
 end

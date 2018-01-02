@@ -20,7 +20,8 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
+      - checkout:
+        post: "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
 
       # Download and cache dependencies
       - restore_cache:
