@@ -1,4 +1,4 @@
-<h4>Register Vehicle</h4>
+<h4><%= I18n.t("parking.form.title") %></h4>
 <div class="row">
     <%= form_with scope: :parking, url: "/parking", class: "col s12", id: "parking-form", local: true do |form| %>
       <% if @parking.errors.any? %>

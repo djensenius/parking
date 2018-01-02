@@ -51,6 +51,7 @@ en:
     heading: "Visitor Parking"
     image-alt: "Arrow Lofts"
     form:
+      title: "Register a Vehicle"
       error: "Error saving registration"
       code: "Code Number"
       unit: "Unit Number"
