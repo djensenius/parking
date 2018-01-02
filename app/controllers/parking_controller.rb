@@ -13,6 +13,7 @@ class ParkingController < ApplicationController
     if @parking.save
       ParkingMailer.registration(@parking).deliver_later
       redirect_to registered_path
+      ParkingMailer.confirmation(@parking).deliver_later if EmailValidator.valid?(@parking[:contact])
     else
       render action: "index"
     end
