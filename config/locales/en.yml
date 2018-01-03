@@ -36,6 +36,8 @@ en:
     login: "Log in"
   footer:
     brand: "Arrow Lofts"
+    address-one: "112 Benton Street"
+    address-two: "Kitchener, Ontario N2G 3H6"
     mission: "A beautiful home in a beautiful city."
     additional-resources: "Additional Resources"
     links:
