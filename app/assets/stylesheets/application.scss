@@ -33,6 +33,10 @@ p {
 }
 
 @media only screen and (max-width: 992px) {
+  .arrow-logo {
+    width: 70%;
+  }
+
   .parallax-container .section {
     position: absolute;
     top: 40%;
@@ -40,6 +44,12 @@ p {
 
   #index-banner .section {
     top: 10%;
+  }
+}
+
+@media only screen and (max-width: 2000px) {
+  .arrow-logo {
+    width: 70%;
   }
 }
 
@@ -59,10 +69,6 @@ p {
 
 footer.page-footer {
   margin: 0;
-}
-
-.arrow-logo {
-  height: 13rem;
 }
 
 .arrow-orange {
