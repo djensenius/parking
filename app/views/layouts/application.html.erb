@@ -21,35 +21,20 @@
     <title><%= I18n.t("title") %></title>
   </head>
   <body>
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="brand-logo" alt="<%= I18n.t("nav.brand-alt") %>"><img class="arrow-logo" src="/assets/ArrowLofts.svg"></a>
-        <!-- <ul class="right hide-on-med-and-down">
-          <li><a href="#"><%= I18n.t("nav.login") %></a></li>
-        </ul> -->
-
-        <!--
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#"><%= I18n.t("nav.login") %></a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-      -->
-    </nav>
-
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center arrow-green"><%= I18n.t("parking.heading") %></h1>
+        <h1 class="header center arrow-green"><a id="logo-container" href="/" class="brand-logo" alt="<%= I18n.t("nav.brand-alt") %>"><img class="arrow-logo" src="/assets/ArrowLofts.svg"></a></h1>
       </div>
     </div>
-    <div class="parallax"><img src="/assets/exterior.jpg" alt="<%= I18n.t("parking.image-alt") %>"></div>
+    <div class="parallax">
+      <img src="/assets/Arrow-Lofts-Rendering.jpg" alt="<%= I18n.t("parking.image-alt") %>">
+    </div>
   </div>
 
   <div class="container">
     <div class="section">
-
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
@@ -60,16 +45,16 @@
     </div>
   </div>
 
-  <footer class="page-footer arrow-orange">
+  <footer class="page-footer arrow-background-grey">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text"><%= I18n.t("footer.brand") %></h5>
+          <p class="grey-text text-lighten-4"><%= I18n.t("footer.address-one") %> <br />
+          <%= I18n.t("footer.address-two") %></p>
           <p class="grey-text text-lighten-4"><%= I18n.t("footer.mission") %></p>
-
-
         </div>
-        <div class="col l6 s12">
+        <div class="col l6 s6">
           <h5 class="white-text"><%= I18n.t("footer.additional-resources") %></h5>
           <ul>
             <li><a class="white-text" href="<%= I18n.t("footer.links.one") %>"><%= I18n.t("footer.links.one-text") %></a></li>
