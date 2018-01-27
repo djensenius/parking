@@ -8,6 +8,7 @@ class AdminController < ApplicationController
   http_basic_authenticate_with name: ENV["ADMIN_USERNAME"], password: ENV["ADMIN_PASSWORD"]
   def index
     @list = Parking.all.reverse
+    @list1 = Parking.first
   end
 
   def destroy

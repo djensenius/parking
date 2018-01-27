@@ -1,26 +1,39 @@
 <h2><%= I18n.t("admin.title") %></h2>
 
-<table class="table striped">
-  <thead>
-    <tr>
-      <th scope="col"><%= I18n.t("parking.form.make") %></th>
-      <th scope="col"><%= I18n.t("parking.form.license") %></th>
-      <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
-      <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
-      <th scope="col"><%= I18n.t("parking.form.contact") %></th>
-      <th><%= I18n.t("admin.delete") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @list.each do |car| %>
-      <tr>
-        <th scope="row"><%= car.make %></th>
-        <td><%= car.license %></td>
-        <td><%= car.start_date %></td>
-        <td><%= car.end_date %></td>
-        <td><%= car.contact %></td>
-        <td><%= link_to '<i class="material-icons red-text">delete_forever</i>'.html_safe, url_for(action: :destroy, id: car.id), method: :delete, data: {confirm: I18n.t("admin.delete_confirmation")} %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#past">Past</a></li>
+        <li class="tab col s3"><a class="active" href="#today">Today</a></li>
+        <li class="tab col s3"><a href="#future">Future</a></li>
+      </ul>
+    </div>
+
+    <div id="past" class="col s12">
+      <p>
+        PAST
+      </p>
+    </div>
+
+    <div id="current" class="col s12">
+      <table class="table striped">
+        <thead>
+          <tr>
+            <th scope="col"><%= I18n.t("parking.form.make") %></th>
+            <th scope="col"><%= I18n.t("parking.form.license") %></th>
+            <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
+            <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
+            <th scope="col"><%= I18n.t("parking.form.contact") %></th>
+            <th><%= I18n.t("admin.delete") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "table", collection: @list, as: :car %>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="future" class="col s12">
+      <p>FUTURE</p>
+    </div>
+  </div>
