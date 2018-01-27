@@ -9,4 +9,8 @@ class Parking < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :contact, presence: true
+
+  scope :today, -> { where("start_date <= ? AND end_date >= ?", Date.today, Date.today) }
+  scope :future, -> { where("start_date > ?", Date.today) }
+  scope :past, -> { where("end_date <= ?", Date.today) }
 end
