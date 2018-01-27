@@ -7,8 +7,9 @@ class AdminController < ApplicationController
   skip_before_action :verify_authenticity_token
   http_basic_authenticate_with name: ENV["ADMIN_USERNAME"], password: ENV["ADMIN_PASSWORD"]
   def index
-    @list = Parking.all.reverse
-    @list1 = Parking.first
+    @today = Parking.today
+    @future = Parking.future
+    @past = Parking.past
   end
 
   def destroy

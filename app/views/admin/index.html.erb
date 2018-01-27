@@ -10,12 +10,6 @@
     </div>
 
     <div id="past" class="col s12">
-      <p>
-        PAST
-      </p>
-    </div>
-
-    <div id="current" class="col s12">
       <table class="table striped">
         <thead>
           <tr>
@@ -28,12 +22,44 @@
           </tr>
         </thead>
         <tbody>
-          <%= render partial: "table", collection: @list, as: :car %>
+          <%= render partial: "table", collection: @past, as: :car %>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="today" class="col s12">
+      <table class="table striped">
+        <thead>
+          <tr>
+            <th scope="col"><%= I18n.t("parking.form.make") %></th>
+            <th scope="col"><%= I18n.t("parking.form.license") %></th>
+            <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
+            <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
+            <th scope="col"><%= I18n.t("parking.form.contact") %></th>
+            <th><%= I18n.t("admin.delete") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "table", collection: @today, as: :car %>
         </tbody>
       </table>
     </div>
 
     <div id="future" class="col s12">
-      <p>FUTURE</p>
+      <table class="table striped">
+        <thead>
+          <tr>
+            <th scope="col"><%= I18n.t("parking.form.make") %></th>
+            <th scope="col"><%= I18n.t("parking.form.license") %></th>
+            <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
+            <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
+            <th scope="col"><%= I18n.t("parking.form.contact") %></th>
+            <th><%= I18n.t("admin.delete") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "table", collection: @future, as: :car %>
+        </tbody>
+      </table>
     </div>
   </div>

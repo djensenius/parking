@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.4.3-node-browsers
+      - image: circleci/ruby:2.5.0-node-browsers
         environment:
           - PG_HOST=localhost
           - PG_USER=ubuntu
@@ -90,6 +90,6 @@ jobs:
           path: /tmp/test-results
           destination: test-results
 
-      - run:
-          name: Post (pronto)
-          command: 'if [ -n "${CI_PULL_REQUEST}" ]; then bundle exec pronto run -f github_pr -c origin/master; fi'
+      # - run:
+      #    name: Post (pronto)
+      #    command: 'if [ -n "${CI_PULL_REQUEST}" ]; then bundle exec pronto run -f github_pr -c origin/master; fi'
