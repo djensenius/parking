@@ -1,8 +1,7 @@
 <tr>
-  <th scope="row"><%= car.make %></th>
+  <th scope="row"><a href="/admin/show/<%= car.id %>"><%= car.make %></a></th>
   <td><%= car.license %></td>
   <td><%= car.start_date %></td>
   <td><%= car.end_date %></td>
-  <td><%= car.contact %></td>
   <td><%= link_to '<i class="material-icons red-text">delete_forever</i>'.html_safe, url_for(action: :destroy, id: car.id), method: :delete, data: {confirm: I18n.t("admin.delete_confirmation")} %></td>
 </tr>

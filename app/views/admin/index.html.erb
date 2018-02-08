@@ -17,7 +17,6 @@
             <th scope="col"><%= I18n.t("parking.form.license") %></th>
             <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
             <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
-            <th scope="col"><%= I18n.t("parking.form.contact") %></th>
             <th><%= I18n.t("admin.delete") %></th>
           </tr>
         </thead>
@@ -28,24 +27,30 @@
     </div>
 
     <div id="today" class="col s12">
-      <table class="table striped">
-        <thead>
-          <tr>
-            <th scope="col"><%= I18n.t("parking.form.make") %></th>
-            <th scope="col"><%= I18n.t("parking.form.license") %></th>
-            <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
-            <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
-            <th scope="col"><%= I18n.t("parking.form.contact") %></th>
-            <th><%= I18n.t("admin.delete") %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= render partial: "table", collection: @today, as: :car %>
-        </tbody>
-      </table>
+      <% if @today.count > 0 %>
+        <table class="table striped">
+          <thead>
+            <tr>
+              <th scope="col"><%= I18n.t("parking.form.make") %></th>
+              <th scope="col"><%= I18n.t("parking.form.license") %></th>
+              <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
+              <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
+              <th><%= I18n.t("admin.delete") %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render partial: "table", collection: @today, as: :car %>
+          </tbody>
+        </table>
+      <% else %>
+      <div class="card-panel arrow-background-green">
+        <span class="white-text"><%= I18n.t("admin.no_today") %></span>
+      </div>
+      <% end %>
     </div>
 
     <div id="future" class="col s12">
+      <% if @future.count > 0 %>
       <table class="table striped">
         <thead>
           <tr>
@@ -53,7 +58,6 @@
             <th scope="col"><%= I18n.t("parking.form.license") %></th>
             <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
             <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
-            <th scope="col"><%= I18n.t("parking.form.contact") %></th>
             <th><%= I18n.t("admin.delete") %></th>
           </tr>
         </thead>
@@ -61,5 +65,12 @@
           <%= render partial: "table", collection: @future, as: :car %>
         </tbody>
       </table>
+      <% else %>
+      <div class="card-panel arrow-background-green">
+        <span class="white-text">
+          <%= I18n.t("admin.no_future") %>
+        </span>
+      </div>
+      <% end %>
     </div>
   </div>

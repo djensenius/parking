@@ -76,6 +76,8 @@ en:
     delete: "Delete"
     delete_confirmation:
       Are you sure? This will permanently remove this registration.
+    no_today: "No registered vehicles today."
+    no_future: "No future registered vehicles."
   email:
     subject: "Arrow Lofts Visitor Parking Registration"
     title: "Arrow Lofts Visitor Parking Registration"

@@ -1,0 +1,22 @@
+<h2><%= I18n.t("admin.title") %></h2>
+<div class="car-details">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card arrow-background-grey">
+        <div class="card-content white-text">
+          <span class="card-title"><%= @registration.color %> <%= @registration.make %></span>
+          <div class="registration-creation"><strong>Reservation created:</strong> <%= local_time(@registration.created_at) %></div>
+          <div class="start-date"><strong>Start Date:</strong> <%= @registration.start_date %></div>
+          <div class="end-date"><strong>End Date:</strong> <%= @registration.end_date %></div>
+          <div class="code"><strong>Code:</strong> <%= @registration.code %></div>
+          <div class="unit"><strong>Unit:</strong> <%= @registration.unit %></div>
+          <div class="license"><strong>License:</strong> <%= @registration.license %></div>
+          <div class="contact"><strong>Contact:</strong> <%= @registration.contact %></div>
+        </div>
+        <div class="card-action">
+          <a href="/admin" class="white-text">Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
