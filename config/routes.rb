@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get "/registered", to: "parking#registered"
   get "/admin", to: "admin#index"
+  get "/admin/simple", to: "admin#simple"
   delete "/admin/delete/:id", to: "admin#destroy"
+  get "/admin/show/:id", to: "admin#show"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

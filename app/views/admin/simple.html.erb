@@ -1,0 +1,22 @@
+<h2><%= I18n.t("admin.title") %></h2>
+
+<div id="today" class="col s12">
+  <% if @today.count > 0 %>
+    <table class="table striped">
+      <thead>
+        <tr>
+          <th scope="col"><%= I18n.t("parking.form.make") %></th>
+          <th scope="col"><%= I18n.t("parking.form.license") %></th>
+          <th scope="col"><%= I18n.t("parking.form.start_date") %></th>
+          <th scope="col"><%= I18n.t("parking.form.end_date") %></th>
+          <th><%= I18n.t("admin.delete") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "table", collection: @today, as: :car %>
+      </tbody>
+    </table>
+  <% else %>
+    <%= I18n.t("admin.no_today") %>
+  <% end %>
+</div>
