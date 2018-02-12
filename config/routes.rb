@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root "application#index"
 
   get "/registered", to: "parking#registered"
+  get "/terms", to: "parking#terms"
+  get "/privacy", to: "parking#terms"
   get "/admin", to: "admin#index"
   get "/admin/simple", to: "admin#simple"
   delete "/admin/delete/:id", to: "admin#destroy"
