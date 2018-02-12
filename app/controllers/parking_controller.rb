@@ -21,6 +21,8 @@ class ParkingController < ApplicationController
 
   def registered; end
 
+  def terms; end
+
 private
 
   def parking_params
