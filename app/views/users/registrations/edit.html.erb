@@ -40,4 +40,9 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
+<h3>Sign Out</h3>
+<%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+
+HI DAVID
+
 <%= link_to "Back", :back %>
