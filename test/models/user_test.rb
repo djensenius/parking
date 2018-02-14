@@ -2,10 +2,16 @@
 
 require "test_helper"
 
-describe User do
-  let(:user) { User.new }
+class UserTest < Minitest::Test
+  describe User do
+    # let(:user) { User.new }
 
-  it "must be valid" do
-    value(user).must_be :valid?
+    it "should respond to create with omniauth" do
+      assert_respond_to(User, :from_omniauth)
+    end
+
+    # it "must be valid" do
+    #  value(user).must_be :valid?
+    # end
   end
 end

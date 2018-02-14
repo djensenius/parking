@@ -58,6 +58,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem "capybara", "~> 2.18"
   gem "database_cleaner"
+  gem "minitest", "~> 5.11.3"
   gem "minitest-profile"
   gem "minitest-rails"
   gem "mocha"
