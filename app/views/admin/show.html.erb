@@ -5,7 +5,7 @@
       <div class="card arrow-background-grey">
         <div class="card-content white-text">
           <span class="card-title"><%= @registration.color %> <%= @registration.make %></span>
-          <div class="registration-creation"><strong>Reservation created:</strong> <%= local_time(@registration.created_at) %></div>
+          <div class="registration-creation"><strong>Reservation created:</strong> <%= @registration.created_at %></div>
           <div class="start-date"><strong>Start Date:</strong> <%= @registration.start_date %></div>
           <div class="end-date"><strong>End Date:</strong> <%= @registration.end_date %></div>
           <div class="code"><strong>Code:</strong> <%= @registration.code %></div>
