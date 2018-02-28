@@ -17,7 +17,7 @@ gem "dotenv-rails"
 gem "email_validator"
 gem "jquery-rails"
 gem "local_time"
-gem "materialize-sass", "~> 1.0.0.alpha3"
+gem "materialize-sass", "~> 1.0.0.alpha4"
 gem "sprockets", "~> 4.0beta6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
