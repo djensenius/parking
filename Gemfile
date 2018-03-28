@@ -11,20 +11,20 @@ end
 gem "activerecord-session_store", github: "rails/activerecord-session_store"
 gem "activeresource"
 gem "bcrypt", "~> 3.1.7"
-gem "bootstrap", "~> 4.0.0.beta"
+gem "bootstrap", "~> 4.0.0"
 gem "bugsnag"
 gem "dotenv-rails"
 gem "email_validator"
 gem "jquery-rails"
 gem "local_time"
-gem "materialize-sass", "~> 1.0.0.alpha4"
-gem "sprockets", "~> 4.0beta6"
+gem "materialize-sass", "~> 1.0.0.beta"
+gem "sprockets", "~> 4.0beta7"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
 # Use postgresql as the database for Active Record
-gem "pg", "~> 0.18"
+gem "pg", "~> 1.0.0"
 # Use Puma as the app server
-gem "puma", "~> 3.7"
+gem "puma", "~> 3.11.3"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0"
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +33,7 @@ gem "uglifier", ">= 1.3.0"
 # gem 'therubyracer', platforms: :ruby
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem "turbolinks", "~> 5"
+gem "turbolinks", "~> 5.1"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.5"
 # Use Redis adapter to run Action Cable in production
@@ -51,7 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", "~> 2.13"
+  gem "capybara", "~> 2.18"
   gem "database_cleaner"
   gem "minitest-profile"
   gem "minitest-rails"
