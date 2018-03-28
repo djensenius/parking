@@ -73,4 +73,8 @@
       </div>
       <% end %>
     </div>
+
+    <div id="download" class="col s12">
+      <%= link_to "<i class=\"material-icons left\">file_download</i> #{I18n.t("admin.download")}".html_safe, admin_path(:format => "csv"), class: "waves-effect arrow-background-orange btn" %>
+    </div>
   </div>

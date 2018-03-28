@@ -11,6 +11,12 @@ class AdminController < ApplicationController
     @today = Parking.today
     @future = Parking.future
     @past = Parking.past
+    @all = Parking.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @all.to_csv, filename: "Arrow-Parking-#{Date.today}.csv" }
+    end
   end
 
   def destroy

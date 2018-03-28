@@ -41,7 +41,7 @@ Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 Style/WordArray:
   EnforcedStyle: brackets
-Lint/EndAlignment:
+Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 Metrics/ClassLength:
   Enabled: false
