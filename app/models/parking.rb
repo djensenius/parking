@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "csv"
+
 class Parking < ApplicationRecord
   validates :unit, presence: true, numericality: { only_integer: true }
   validates :code, presence: true
