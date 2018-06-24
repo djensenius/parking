@@ -92,3 +92,5 @@ en:
       title: "Arrow Lofts Visitor Parking Registration Confirmation"
       introduction: |
         You registered the following vehicle to use visitor parking.
+  errors:
+    too_long: "You cannot register a vehicle for this length of time."
