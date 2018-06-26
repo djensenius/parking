@@ -31,7 +31,7 @@ class DateValidator < ActiveModel::Validator
   end
 
   def next_month_too_long(record)
-    return true if record.end_date.day > 5
+    return true if record.end_date.day > ENV["NUMBER_OF_DAYS"].to_i
     false
   end
 

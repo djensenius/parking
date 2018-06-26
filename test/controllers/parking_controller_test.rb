@@ -14,7 +14,7 @@ describe ParkingController do
           color: "Green",
           license: "banana",
           start_date: "2017-05-05",
-          end_date: "2017-05-06",
+          end_date: "2017-05-09",
           contact: "test@example.com"
         }
       }
@@ -33,7 +33,7 @@ describe ParkingController do
         color: "Green",
         license: "banana",
         start_date: "2017-05-01",
-        end_date: "2017-05-02",
+        end_date: "2017-05-04",
         contact: "test@example.com"
       )
       parking.save
@@ -50,7 +50,7 @@ describe ParkingController do
         color: "Green",
         license: "banana",
         start_date: "2017-05-01",
-        end_date: "2017-05-02",
+        end_date: "2017-05-04",
         contact: "test@example.com"
       )
       parking.save
@@ -69,7 +69,7 @@ describe ParkingController do
           color: "Green",
           license: "banana",
           start_date: "2017-05-05",
-          end_date: "2017-05-06",
+          end_date: "2017-05-09",
           contact: "555-5555"
         }
       }
@@ -84,7 +84,7 @@ describe ParkingController do
         color: "Green",
         license: "banana",
         start_date: "2017-05-01",
-        end_date: "2017-05-02",
+        end_date: "2017-05-05",
         contact: "555-5555"
       )
       parking.save
