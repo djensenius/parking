@@ -14,7 +14,7 @@ describe ParkingController do
           color: "Green",
           license: "banana",
           start_date: "2017-05-05",
-          end_date: "2017-06-06",
+          end_date: "2017-05-09",
           contact: "test@example.com"
         }
       }
@@ -33,7 +33,7 @@ describe ParkingController do
         color: "Green",
         license: "banana",
         start_date: "2017-05-01",
-        end_date: "2017-05-02",
+        end_date: "2017-05-04",
         contact: "test@example.com"
       )
       parking.save
@@ -50,7 +50,7 @@ describe ParkingController do
         color: "Green",
         license: "banana",
         start_date: "2017-05-01",
-        end_date: "2017-05-02",
+        end_date: "2017-05-04",
         contact: "test@example.com"
       )
       parking.save
@@ -69,7 +69,7 @@ describe ParkingController do
           color: "Green",
           license: "banana",
           start_date: "2017-05-05",
-          end_date: "2017-06-06",
+          end_date: "2017-05-09",
           contact: "555-5555"
         }
       }
@@ -84,7 +84,7 @@ describe ParkingController do
         color: "Green",
         license: "banana",
         start_date: "2017-05-01",
-        end_date: "2017-05-02",
+        end_date: "2017-05-05",
         contact: "555-5555"
       )
       parking.save
@@ -106,7 +106,7 @@ describe ParkingController do
               color: "Green",
               license: "banana",
               start_date: "2017-05-05",
-              end_date: "2017-06-06"
+              end_date: "2017-05-06"
             }
           }
 
@@ -143,6 +143,97 @@ describe ParkingController do
           subject
           assert_template "parking/index"
         end
+      end
+    end
+  end
+
+  describe "Too many days" do
+    describe "In a single month" do
+      let(:params) do
+        {
+          parking: {
+            code: "ABC",
+            unit: 1,
+            make: "FAST",
+            color: "Green",
+            license: "banana",
+            start_date: "2017-05-05",
+            end_date: "2017-05-26",
+            contact: "test@example.com"
+          }
+        }
+      end
+      let(:subject) { post :create, params: params }
+
+      it "Should not save" do
+        subject
+        assert_template "parking/index"
+      end
+    end
+
+    describe "In multilpe months beginning month too long" do
+      let(:params) do
+        {
+          parking: {
+            code: "ABC",
+            unit: 1,
+            make: "FAST",
+            color: "Green",
+            license: "banana",
+            start_date: "2017-05-20",
+            end_date: "2017-06-26",
+            contact: "test@example.com"
+          }
+        }
+      end
+      let(:subject) { post :create, params: params }
+      it "Should not save" do
+        subject
+        assert_template "parking/index"
+      end
+    end
+
+    describe "In multilpe months beginning end too long" do
+      let(:params) do
+        {
+          parking: {
+            code: "ABC",
+            unit: 1,
+            make: "FAST",
+            color: "Green",
+            license: "banana",
+            start_date: "2017-05-29",
+            end_date: "2017-06-26",
+            contact: "test@example.com"
+          }
+        }
+      end
+      let(:subject) { post :create, params: params }
+      it "Should not save" do
+        subject
+        assert_template "parking/index"
+      end
+    end
+
+    describe "Spanning more than a month" do
+      let(:params) do
+        {
+          parking: {
+            code: "ABC",
+            unit: 1,
+            make: "FAST",
+            color: "Green",
+            license: "banana",
+            start_date: "2017-05-29",
+            end_date: "2017-07-02",
+            contact: "test@example.com"
+          }
+        }
+      end
+      let(:subject) { post :create, params: params }
+      it "Should not save" do
+        subject
+        assert_template "parking/index"
       end
     end
   end
