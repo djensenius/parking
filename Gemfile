@@ -17,12 +17,12 @@ gem "dotenv-rails"
 gem "email_validator"
 gem "jquery-rails"
 gem "local_time"
-gem "materialize-sass", "~> 1.0.0.rc2"
+gem "materialize-sass", "~> 1.0.0"
 gem "sprockets", "~> 4.0beta8"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.1"
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1.2"
+gem "pg", "~> 1.1.3"
 # Use Puma as the app server
 gem "puma", "~> 3.12.0"
 # Use SCSS for stylesheets
@@ -51,7 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", "~> 2.18"
+  gem "capybara", "~> 3.9.0"
   gem "database_cleaner"
   gem "minitest-profile"
   gem "minitest-rails"
@@ -74,7 +74,7 @@ group :development do
   gem "letter_opener"
   gem "listen", ">= 3.0.5", "< 3.2"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem "web-console", ">= 3.6.2"
+  gem "web-console", ">= 3.7.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.1"

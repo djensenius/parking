@@ -6,6 +6,7 @@ class DateValidator < ActiveModel::Validator
   def validate(record)
     return if record.end_date.nil? || record.start_date.nil?
     return multiple_months(record) if record&.end_date&.month != record&.start_date&.month
+
     month(record)
   end
 
@@ -27,11 +28,13 @@ class DateValidator < ActiveModel::Validator
   def current_month_too_long(record)
     return true if Time.days_in_month(record.start_date.month, record.start_date.year) - record.start_date.day >
                    ENV["NUMBER_OF_DAYS"].to_i
+
     false
   end
 
   def next_month_too_long(record)
     return true if record.end_date.day > ENV["NUMBER_OF_DAYS"].to_i
+
     false
   end
 
