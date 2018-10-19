@@ -32,6 +32,10 @@ p {
   width: 100%;
 }
 
+.parallax-container .parallax img {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 992px) {
   .arrow-logo {
     opacity: 0.8;

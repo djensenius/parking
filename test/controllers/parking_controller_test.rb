@@ -95,18 +95,18 @@ describe ParkingController do
   end
 
   describe "Missing params" do
-    [:code, :unit, :make, :color, :license, :start_date, :end_date, :contact].each do |param|
+    [:unit, :make, :color, :license, :start_date, :end_date, :contact].each do |param|
       describe "Missing #{param}" do
         full_parameter =
           {
             parking: {
-              code: "ABC",
-              unit: 1,
+              unit: "1",
               make: "FAST",
               color: "Green",
               license: "banana",
               start_date: "2017-05-05",
-              end_date: "2017-05-06"
+              end_date: "2017-05-06",
+              contact: "test@test.com"
             }
           }
 
