@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-ruby "2.5.1"
+ruby "2.5.3"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -28,14 +28,14 @@ gem "puma", "~> 3.12.0"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0.7"
 # Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 4.1.18"
+gem "uglifier", ">= 4.1.20"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks", "~> 5.2"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.7.0"
+gem "jbuilder", "~> 2.8.0"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -51,7 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", "~> 3.9.0"
+  gem "capybara", "~> 3.11.0"
   gem "database_cleaner"
   gem "minitest-profile"
   gem "minitest-rails"
