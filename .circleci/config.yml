@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.5.3-node-browsers
         environment:
           - PG_HOST=localhost
           - PG_USER=ubuntu
@@ -80,7 +80,7 @@ jobs:
 
       - run:
           name: Yart test && CodeCov
-          command: yarn test && yarn run codecov
+          command: yarn run codecov
 
       # collect reports
       - store_test_results:
