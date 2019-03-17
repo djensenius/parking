@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-ruby "2.5.3"
+ruby "2.6.2"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -11,7 +11,7 @@ end
 gem "activerecord-session_store", github: "rails/activerecord-session_store"
 gem "activeresource"
 gem "bcrypt", "~> 3.1.12"
-gem "bootstrap", "~> 4.1.3"
+gem "bootstrap", ">= 4.3.1"
 gem "bugsnag"
 gem "dotenv-rails"
 gem "email_validator"
@@ -20,7 +20,7 @@ gem "local_time"
 gem "materialize-sass", "~> 1.0.0"
 gem "sprockets", "~> 4.0beta8"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 5.2.1"
+gem "rails", "~> 5.2.2.1"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1.3"
 # Use Puma as the app server
@@ -51,7 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", "~> 3.11.0"
+  gem "capybara", "~> 3.14.0"
   gem "database_cleaner"
   gem "minitest-profile"
   gem "minitest-rails"
