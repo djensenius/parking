@@ -24,7 +24,7 @@ gem "rails", "~> 5.2.2.1"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1.3"
 # Use Puma as the app server
-gem "puma", "~> 3.12.0"
+gem "puma", "~> 3.12.6"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0.7"
 # Use Uglifier as compressor for JavaScript assets
