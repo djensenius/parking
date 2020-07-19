@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.6.2-node-browsers
+      - image: circleci/ruby:2.7.1-node-browsers
         environment:
           - PG_HOST=localhost
           - PG_USER=ubuntu
@@ -37,14 +37,14 @@ jobs:
           command: |
             sudo apt-get install cmake python-pip yamllint python3-pkg-resources
             gem install bundler
-            yarn
+            npm install
             bundle install --jobs=4 --retry=3 --path vendor/bundle
 
       - save_cache:
           key: gem-cache-{{ arch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-            - ~/.cache/yarn
+            - ~/.cache/npm
 
       # Database setup
       - run:
@@ -71,16 +71,16 @@ jobs:
           command: yamllint config/locales/
 
       - run:
-          name: Yarn lint
-          command: yarn lint
+          name: NPM lint
+          command: npm lint
 
       - run:
           name: Stylelint
-          command: yarn stylelint
+          command: npm stylelint
 
       - run:
           name: Yart test && CodeCov
-          command: yarn run codecov
+          command: npm run codecov
 
       # collect reports
       - store_test_results:
