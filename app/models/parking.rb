@@ -5,9 +5,13 @@ require "csv"
 class DateValidator < ActiveModel::Validator
   def validate(record)
     return if record.end_date.nil? || record.start_date.nil?
-    return multiple_months(record) if record&.end_date&.month != record&.start_date&.month
+    return multiple_months(record) if multiple_months?(record)
 
     month(record)
+  end
+
+  def multiple_months?(record)
+    return true if record&.end_date&.month != record&.start_date&.month
   end
 
   def month(record)

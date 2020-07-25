@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.7
   Exclude:
     - "config/spring.rb"
     - "config/initializers/**/*"
@@ -17,7 +17,7 @@ AllCops:
     - "bin/rails"
     - "bin/**"
 
-Documentation:
+Style/Documentation:
   Enabled: false
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
@@ -27,7 +27,7 @@ Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 Layout/FirstParameterIndentation:
   EnforcedStyle: consistent
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 Style/MultilineBlockChain:
   Enabled: false
@@ -45,7 +45,7 @@ Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 Metrics/ClassLength:
   Enabled: false
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 Metrics/BlockLength:
   Exclude:
